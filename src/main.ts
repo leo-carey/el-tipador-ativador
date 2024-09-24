@@ -31,6 +31,8 @@ function startElTipador() {
     }
 
     times++
+
+    mouseMoveSimulator()
   }, 1000)
 }
 
@@ -44,4 +46,16 @@ function stopTipador() {
   if (intervalTipador) {
     clearInterval(intervalTipador)
   }
+}
+
+function mouseMoveSimulator() {
+  const event = new MouseEvent('mousemove', {
+    view: window,
+    bubbles: true,
+    cancelable: true,
+    clientX: Math.random() * window.innerWidth,
+    clientY: Math.random() * window.innerHeight
+  })
+
+  document.dispatchEvent(event)
 }

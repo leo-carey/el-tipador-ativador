@@ -4,10 +4,39 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>El Tipador Ativador</title>
+
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <main class="container m-auto mt-4 text-center">
+      <header class="p-4">
+        <h1 class="text-2xl text-stone-600">Welcome to El Tipador Ativador!</h1>
+      </header>
+
+      <main class="p-4">
+        <div class="p-4 rounded-lg">
+          <textarea id="tipador-area" class="w-[320px] p-2 h-[140px] block m-auto mb-8 border-2 border-solid border-stone-300 rounded-md"></textarea>
+
+          <div class="flex gap-x-4 m-auto w-fit">
+            <button id="start-tipador" class="bg-green-300 text-stone-700 p-2 rounded-lg hover:bg-green-600 hover:text-white transition-colors">
+              Iniciar Tipador
+            </button>
+
+            <button id="stop-tipador" class="bg-red-500 text-white p-2 rounded-lg hover:bg-red-600 transition-colors">
+              Parar Tipador
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <hr>
+
+      <footer class="p-4">
+        <p>Copyright ©2024 El Tipador Ativador</p>
+      </footer>
+    </main>
+    
+    <script type="module" src="./src/main.ts"></script>
   </body>
 </html>
